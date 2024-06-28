@@ -52,7 +52,7 @@ jobs:
           git checkout feature/${{ github.run_number }}
           # values.yamlのタグ番号を更新
           sed -i 's/tag: [0-9]*/tag: ${{ github.run_number }}/g' values.yaml
-          # プッシュ処理す
+          # プッシュ処理する
           git add values.yaml
           git commit -m "Update tag ${{ github.run_number }}"
           git push origin feature/${{ github.run_number }}
