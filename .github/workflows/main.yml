@@ -22,7 +22,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: '${{ secrets.GIT_USERNAME }}/gitops-go-app:${{ github.run_number }}'
+          image-ref: '${{ secrets.DOCKER_USERNAME }}/gitops-go-app:${{ github.run_number }}'
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
