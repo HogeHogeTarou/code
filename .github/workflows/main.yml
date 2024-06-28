@@ -41,7 +41,7 @@ jobs:
         run: |
           # GitHubログインする
           echo -e "machine github.com\nlogin ${{ secrets.GIT_USERNAME }}\npassword ${{ secrets.GIT_PASSWORD }}" > ~/.netrc
-          # 「config」リポジトリからクローン
+          # 「config」リポジトリからクローンする
           git clone https://github.com/${{ secrets.GIT_USERNAME }}/config.git
           # values.yamlファイルの更新処理
           cd config/gitops-helm
