@@ -39,7 +39,7 @@ jobs:
         # values.yamlの更新、新規ブランチ作成、プッシュ、プルリクエスト
       - name: Update values.yaml & Pull Request to Config Repository
         run: |
-          # GitHubログイン
+          # GitHubログインする
           echo -e "machine github.com\nlogin ${{ secrets.GIT_USERNAME }}\npassword ${{ secrets.GIT_PASSWORD }}" > ~/.netrc
           # 「config」リポジトリからクローン
           git clone https://github.com/${{ secrets.GIT_USERNAME }}/config.git
